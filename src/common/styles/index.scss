@@ -1,3 +1,5 @@
+@use "./variables.scss" as mixins;
+
 *,
 *::before,
 *::after {
@@ -24,22 +26,4 @@ body {
 ol,
 ul {
     list-style: none;
-}
-
-a {
-    color: var(--c-primary-700);
-
-    &:focus-visible {
-        color: var(--c-primary-800);
-    }
-
-    @include breakpoints.minLaptop() {
-        &:hover {
-            color: var(--c-primary-800);
-        }
-    }
-
-    &:active {
-        opacity: 0.5;
-    }
 }

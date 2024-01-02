@@ -1,10 +1,10 @@
-import styles from './application.module.css';
+import styles from './page.module.scss';
 
 export function App() {
 
   return (
     <div className={styles.start}>
-      Start
+      Collection
     </div>
   );
 }
