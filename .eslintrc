@@ -1,0 +1,105 @@
+{
+    "$schema": "https://json.schemastore.org/eslintrc",
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "plugins": ["simple-import-sort", "import"],
+    "settings": {
+        "react": {
+            "version": "18.2.0"
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "overrides": [
+        {
+            "files": ["*.js", "*.jsx"],
+            "rules": {
+                "@typescript-eslint/no-var-requires": "off"
+            }
+        }
+    ],
+    "rules": {
+        "react/prop-types": "off",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/self-closing-comp": [
+            "error",
+            {
+                "component": true,
+                "html": true
+            }
+        ],
+        "no-unused-vars": "off",
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": ["../../../*"],
+                "paths": [
+                    {
+                        "name": "effector-react/scope",
+                        "message": "Use isomorphic 'effector-react' instead."
+                    },
+                    {
+                        "name": "effector-react/compat",
+                        "message": "Use 'effector-react' instead."
+                    }
+                ]
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "after-used",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "import/no-absolute-path": "error",
+        "import/default": "error",
+        "import/no-webpack-loader-syntax": "error",
+        "import/no-self-import": "error",
+        "import/no-cycle": "error",
+        "import/no-deprecated": "error",
+        "import/no-useless-path-segments": [
+            "error",
+            {
+                "noUselessIndex": true
+            }
+        ],
+        "import/first": "error",
+        "import/no-duplicates": "error",
+        "import/no-namespace": "error",
+        "import/extensions": [
+            "error",
+            "never",
+            {
+                "css": "always",
+                "scss": "always",
+                "png": "always",
+                "jpg": "always",
+                "ttf": "always",
+                "woff": "always",
+                "woff2": "always",
+                "svg": "always",
+                "json": "always"
+            }
+        ],
+        "import/newline-after-import": "error",
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [["^@?\\w"], ["^"], ["^\\."], ["^.*css"]]
+            }
+        ],
+        "simple-import-sort/exports": "error",
+        "no-console": ["error", {"allow": ["warn", "error", "info"]}]
+    }
+}

@@ -1,10 +1,5 @@
-import styles from './page.module.scss';
+import styles from "./page.module.scss";
 
 export function Collection() {
-
-  return (
-    <div className={styles.start}>
-      Collection
-    </div>
-  );
+  return <div className={styles.start}>Collection</div>;
 }
