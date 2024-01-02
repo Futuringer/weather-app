@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--c-primary-700);
+
+    &:focus-visible {
+        color: var(--c-primary-800);
+    }
+
+    @include breakpoints.minLaptop() {
+        &:hover {
+            color: var(--c-primary-800);
+        }
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
