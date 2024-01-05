@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+import { SearchIcon } from "@/assets/images/search-icon";
+
+import styles from "./search.module.scss";
+
 export function SearchForm(): JSX.Element {
   const [value, setValue] = useState("");
 
@@ -15,15 +19,18 @@ export function SearchForm(): JSX.Element {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <button type="submit">1</button>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <input
+        className={styles.input}
         type="text"
         name="city"
         onChange={handleChange}
         value={value}
-        placeholder="Введите город..."
+        placeholder=" Search for a city or airport"
       />
+      <button className={styles.button} type="submit">
+        <SearchIcon />
+      </button>
     </form>
   );
 }

@@ -1,4 +1,68 @@
-@use "./variables.scss" as mixins;
+@use "./mixins.scss";
+
+// TODO поменять подгрузку шрифтов и удалить неиспользующиеся
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Black.otf) format('opentype');
+  font-weight: 900,
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Bold.otf) format('opentype');
+  font-weight: 800,
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Heavy.otf) format('opentype');
+  font-weight: 700,
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Light.otf) format('opentype');
+  font-weight: 600,
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Medium.otf) format('opentype');
+  font-weight: 500,
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Regular.otf) format('opentype');
+  font-weight: 400,
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Semibold.otf) format('opentype');
+  font-weight: 300,
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Thin.otf) format('opentype');
+  font-weight: 200,
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'),
+  url(../../assets/fonts/SF-Pro-Display-Ultralight.otf) format('opentype');
+  font-weight: 100,
+}
 
 *,
 *::before,
@@ -6,6 +70,8 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+input, select, textarea, button{font-family:inherit;}
 
 html {
     overflow-y: scroll;
@@ -16,6 +82,7 @@ body {
     min-height: 100vh;
     display: flex;
     background: radial-gradient(103.89% 121.8% at 34.94% 108.33%, #F7CBFD 0%, #7758D1 100%);
+    font-family: "SF-Pro", sans-serif;
 }
 
 #root {
@@ -26,7 +93,6 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background: linear-gradient(168deg, #2E335A 1.62%, #1C1B33 95.72%);
 }
 
 ol,

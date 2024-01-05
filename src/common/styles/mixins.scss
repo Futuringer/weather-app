@@ -1,0 +1,55 @@
+// Outline
+@mixin outline {
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+// Accessible hiding
+@mixin visuallyHidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+// Resets all button styles
+@mixin resetButton() {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+
+// Customize default scroll bar
+@mixin customScrollBar($thickness: units.pxToRem(8), $thumbBackground: var(red)) {
+    &::-webkit-scrollbar {
+        width: $thickness;
+        height: $thickness;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $thumbBackground;
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: units.pxToRem(4);
+        background-clip: padding-box;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
