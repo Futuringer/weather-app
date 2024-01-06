@@ -9,6 +9,7 @@ export default defineConfig({
     babel({ extensions: [".ts", ".tsx"], babelHelpers: "bundled" }),
     react({ fastRefresh: false }),
   ],
+  base: "/weather-app/",
   resolve: {
     alias: [{ find: "@", replacement: resolve(__dirname, "src") }],
   },
