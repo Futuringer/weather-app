@@ -1,4 +1,7 @@
+import { useUnit } from "effector-react";
+
 import { DeleteIcon } from "@/assets";
+import { cityDeleted } from "@/models/model";
 import { CardDataType } from "@/types/types";
 
 import styles from "./card.module.scss";
@@ -12,8 +15,13 @@ export function Card({
   temp,
   temp_max,
   temp_min,
+  city_id,
 }: Props): JSX.Element {
+  const deleteCity = useUnit(cityDeleted);
   const getTemp = (temp: number) => Math.round(temp - 273);
+  const onDeleteClick = () => {
+    deleteCity(city_id);
+  };
 
   return (
     <article className={styles.card}>
@@ -34,7 +42,7 @@ export function Card({
         </div>
         <p className={styles.description}>{description}</p>
       </div>
-      <button className={styles.button} type="button">
+      <button className={styles.button} onClick={onDeleteClick} type="button">
         <DeleteIcon className={styles.icon} />
       </button>
     </article>

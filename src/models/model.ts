@@ -30,7 +30,6 @@ export const cityDeleted = createEvent<number>();
 
 export const $url = createStore(URL_API);
 export const $cities = createStore([]);
-export const $isLoading = createStore(false);
 
 // запрос данных погоды по одному городу
 export const fetchWeatherByCity = attach({
@@ -70,5 +69,3 @@ persist({
   store: $cards,
   key: "cards",
 });
-
-$isLoading.on(fetchFx.pending, (_, isPending) => isPending);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { SearchIcon } from "@/assets/images/search-icon";
-import { $isLoading, fetchWeatherByCity } from "@/models/model";
+import { fetchWeatherByCity } from "@/models/model";
 
 import styles from "./search.module.scss";
 
@@ -23,6 +23,7 @@ export function SearchForm(): JSX.Element {
     <form className={styles.form} onSubmit={handleSubmit}>
       <input
         className={styles.input}
+        autoComplete="off"
         type="text"
         name="city"
         onChange={handleChange}
