@@ -6,7 +6,6 @@ import {
   Store,
 } from "effector";
 import persist from "effector-localstorage";
-import { createGate } from "effector-react";
 
 import {
   CardDataType,
@@ -25,7 +24,6 @@ export const fetchFx = createEffect(async (url: string) => {
   return res.json() as Promise<WeatherRequestResponse>;
 });
 
-export const AppGate = createGate();
 export const cityDeleted = createEvent<number>();
 
 export const $url = createStore(URL_API);
