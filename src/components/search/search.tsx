@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { SearchIcon } from "@/assets/images/search-icon";
+import { $isLoading, fetchWeatherByCity } from "@/models/model";
 
 import styles from "./search.module.scss";
 
@@ -10,7 +11,7 @@ export function SearchForm(): JSX.Element {
   const handleSubmit = (evt: React.SyntheticEvent) => {
     evt.preventDefault();
 
-    //fetchWeatherByCity(value);
+    fetchWeatherByCity(value);
     setValue("");
   };
 

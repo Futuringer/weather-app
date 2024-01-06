@@ -1,4 +1,6 @@
 .content {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 32px 16px 16px 16px;
   background: linear-gradient(168deg, #464a6b 1.62%, #1C1B33 95.72%);

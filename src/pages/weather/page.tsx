@@ -1,15 +1,18 @@
-import { Card, SearchForm } from "@/components";
+import { useGate } from "effector-react";
+
+import { CardsBlock, SearchForm } from "@/components";
+import { AppGate } from "@/models/model";
 
 import styles from "./page.module.scss";
 
 export default function WeatherPage(): JSX.Element {
+  useGate(AppGate);
+
   return (
     <div className={styles.content}>
       <div className={styles.header}>Weather</div>
       <SearchForm />
-      {[1, 2, 3].map((item) => (
-        <Card key={item} />
-      ))}
+      <CardsBlock />
     </div>
   );
 }

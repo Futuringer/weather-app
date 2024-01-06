@@ -1,18 +1,42 @@
-export function Card(): JSX.Element {
+import { DeleteIcon } from "@/assets";
+import { CardDataType } from "@/types/types";
+
+import styles from "./card.module.scss";
+
+type Props = CardDataType;
+
+export function Card({
+  description,
+  icon,
+  name,
+  temp,
+  temp_max,
+  temp_min,
+}: Props): JSX.Element {
+  const getTemp = (temp: number) => Math.round(temp - 273);
+
   return (
-    <article>
-      <div>
-        <h2>Москва</h2>
-        <span>-20°</span>
+    <article className={styles.card}>
+      <div className={styles.rowContainer}>
+        <span className={styles.temperature}>{getTemp(temp)}°</span>
+        <img
+          className={styles.image}
+          src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+          alt=""
+        />
       </div>
-      <div>
+      <div className={styles.descriptionRow}>
         <div>
-          <p>переменная облачность</p>
-          <p>Макс.: -19°, мин.: -21°</p>
+          <p className={styles.maxTemperatures}>
+            H: {getTemp(temp_max)}°, L: {getTemp(temp_min)}°
+          </p>
+          <p className={styles.city}>{name}</p>
         </div>
-        <img src="https://openweathermap.org/img/wn/03n@2x.png" alt="" />
+        <p className={styles.description}>{description}</p>
       </div>
-      <button type="button">x</button>
+      <button className={styles.button} type="button">
+        <DeleteIcon className={styles.icon} />
+      </button>
     </article>
   );
 }

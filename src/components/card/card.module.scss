@@ -1,0 +1,70 @@
+@use "../../common/styles/mixins.scss" as mixins;
+
+.card {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  padding: 20px;
+  position: relative;
+  background: no-repeat url("../../../resources/svgviewer-output.svg");
+  background-size: 100% 180px;
+}
+
+.button {
+  @include mixins.resetButton();
+  position: absolute;
+  top: 0;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+}
+
+.rowContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temperature {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.374px;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  margin: -30px;
+}
+
+.descriptionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.maxTemperatures {
+  color: rgba(235, 235, 245, 0.60);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.08px;
+}
+
+.city {
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+}
+
+.description {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+}
