@@ -1,7 +1,7 @@
-<img src="https://github.com/Futuringer/weather-app/assets/77829629/45630f88-8c1c-4063-8df1-94441aa335a8" width="50%"/>
 
 # Проект Weather-App
-[Проект онлайн]
+[Проект онлайн]([https://www.google.com](https://futuringer.github.io/weather-app/))
+<img src="https://github.com/Futuringer/weather-app/assets/77829629/45630f88-8c1c-4063-8df1-94441aa335a8" width="50%"/>
 
 Тестовое задание, проект представляет из себя приложения прогноза погоды. 
 
@@ -36,5 +36,3 @@ npm run build
 ```sh
 npm run dev
 ```
-
-[Проект онлайн]: [https://messenjuice.netlify.app](https://futuringer.github.io/weather-app/)https://futuringer.github.io/weather-app/
