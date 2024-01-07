@@ -1,6 +1,6 @@
 
 # Проект Weather-App
-[Проект онлайн]([https://www.google.com](https://futuringer.github.io/weather-app/))
+[I'm an inline-style link](https://www.google.com)
 
 <img src="https://github.com/Futuringer/weather-app/assets/77829629/45630f88-8c1c-4063-8df1-94441aa335a8" width="50%"/>
 
