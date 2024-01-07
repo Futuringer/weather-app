@@ -13,6 +13,7 @@ Store сохраняется в localStorage.
 
 # Стек:
 
+- React
 - TypeScript
 - Effector
 - FramerMotion
