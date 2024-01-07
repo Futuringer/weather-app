@@ -1,5 +1,4 @@
 <img src="https://github.com/Futuringer/weather-app/assets/77829629/45630f88-8c1c-4063-8df1-94441aa335a8" width="50%"/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4d3dc214-d8ca-498d-aa2c-48461432232f/deploy-status)](https://app.netlify.com/sites/messenjuice/deploys)
 
 # Проект Weather-App
 [Проект онлайн]
